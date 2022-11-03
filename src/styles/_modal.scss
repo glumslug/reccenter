@@ -1,0 +1,114 @@
+@mixin modalStyle{
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #d892a1;
+  padding: 10px;
+  z-index: 1000;
+  min-width: 250px;
+  min-height: 30px;
+  max-width: 320px;
+  border-radius: 5px;
+  border: 2px black solid;
+  opacity: 1;
+  animation: modal-rise .2s ease-in;
+}
+.emphasis{
+  color:rgb(217, 234, 66);
+  margin-top: 3px;
+}
+.break{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal {
+    @include modalStyle();
+    button{
+      position: fixed;
+      top: -5%;
+      left: 97%;
+      transform: translate(-25%, -25%);
+      z-index: 1001;
+      min-width: 20px;
+      min-height: 20px;
+      background-color: red;
+      border-radius: 50px;
+      border: 2px black solid;
+      cursor: pointer;
+    } 
+    img {
+    margin: 2px;
+    border-radius: 5px;
+    border: rgb(0, 0, 0) solid 1.5px;
+    width: 50px;
+    height: 50px;
+    background: #DAE3F3;
+    cursor: pointer;
+  }
+}
+  @keyframes modal-rise{
+    0%{
+      transform-origin: bottom;
+      transform: scale(0) translate(-50%, 50%);
+      
+    }
+    100%{
+      
+      transform: scale(1) translate(-50%, -50%);
+      
+    }
+  }
+  
+  
+  .modal-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    
+    background-color: rgba(69, 68, 68, 0.5);
+    
+    z-index: 2;
+  }
+@mixin YNBtns{
+   padding: 4px;
+   margin: 4px 6px;
+   border-radius: 5px;
+   outline: black solid 1px;
+   cursor: pointer;
+   font-weight: 700;
+   &:hover{
+    opacity: .6;
+    color: white;
+   }
+}
+.modal-yn{
+  @include modalStyle();
+  background-color: grey;
+  flex-direction: column;
+  top: 50%;
+  h3{
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .buttons{
+    display: flex;
+    flex-direction: row;
+  }
+  #modal-yes{
+    background-color: rgb(46, 194, 46);
+    @include YNBtns();
+  }
+  #modal-no{
+    background-color: red;
+    @include YNBtns();
+  }
+}

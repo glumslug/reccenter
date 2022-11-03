@@ -1,0 +1,330 @@
+//Registration page
+
+.form {
+  margin: 67px 0 1rem 0;
+  padding: 10px;
+  background-color: $formBkg;
+  outline: 1.5px solid $formOtl;
+
+  border-radius: 10px;
+  width: calc(100% - 23px);
+
+  .form-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title {
+    background-color: $formTtl;
+    padding: 8px 10px;
+    margin: 2px 2px 5px 2px;
+    border-radius: 6px;
+    font-style: italic;
+    width: 60%;
+    align-self: start;
+    font-size: 14px;
+    outline: 1.5px solid $formOtl;
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      border: none;
+      box-shadow: none;
+      -webkit-appearance: none;
+      background-color: $fieldBkg;
+      padding: 10px;
+      margin: 7px 2px;
+      border-radius: 6px;
+      font-style: italic;
+      outline: 1.5px solid $formOtl;
+      width: 93%;
+    }
+    #submit {
+      width: 60%;
+      align-self: end;
+      padding: 8px;
+      background-color: $formSub;
+
+      cursor: pointer;
+    }
+    .form-actions {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      #submit {
+        width: 65%;
+      }
+      .delete {
+        background-color: $formDel;
+        width: 30%;
+      }
+    }
+    button {
+      @extend input;
+      @extend #submit;
+    }
+    .cancel {
+      background-color: $formCnl;
+      margin-top: 2px;
+      width: 65%;
+    }
+    .forgot-password {
+      display: flex;
+      justify-content: end;
+      color: rgb(77, 77, 253);
+      font-size: 0.8rem;
+      p {
+        margin: 0 4px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .settings {
+    display: flex;
+    align-items: center;
+
+    .remove {
+      margin-right: 2px;
+    }
+  }
+  .return {
+    mask-image: url("../images/circle-arrow-left-solid.svg");
+
+    height: 1.5rem;
+    width: 1.5rem;
+    outline: 1.5px solid $formOtl;
+    border-radius: 3px;
+
+    background: rgb(89, 89, 89);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    &:active {
+      background: rgb(255, 219, 219);
+    }
+  }
+  .addContainer {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    background-color: none;
+    align-items: center;
+    p {
+      font-size: 0.8rem;
+      font-style: italic;
+      margin-right: 0.5rem;
+      background-color: rgb(219, 189, 189);
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+  .add {
+    color: $fieldBkg;
+    font-size: 1.7rem;
+    line-height: 1.4rem;
+    font-weight: 900;
+    background-color: rgb(70, 125, 255);
+    border-radius: 5px;
+    padding-bottom: 4px;
+    border: 1.2px solid $formOtl;
+    margin: 1px;
+
+    cursor: pointer;
+    &:active {
+      background-color: rgb(80, 238, 175);
+      transition: 0.5s;
+    }
+  }
+  .group {
+    background-color: rgb(81, 81, 82);
+    border-radius: 3px;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    .none {
+      color: rgb(218, 193, 81);
+      margin-left: 27%;
+      font-style: italic;
+    }
+    .member {
+      display: flex;
+      align-items: center;
+      width: 70%;
+
+      img {
+        height: 27px;
+        width: 27px;
+        outline: 1.5px solid $formOtl;
+        border-radius: 3px;
+        padding: 1px;
+        margin: 1px;
+        background-color: $fieldBkg;
+        margin-left: 2px;
+      }
+      .name {
+        height: 25px;
+        width: 90%;
+        padding: 2px;
+        outline: 1.5px solid $formOtl;
+        border-radius: 3px;
+        padding: 2px;
+        margin-left: 6px;
+        background-color: $fieldBkg;
+        display: flex;
+        align-items: center;
+        cursor: default;
+      }
+    }
+  }
+}
+.body .form {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+ul {
+  li {
+    display: flex;
+  }
+}
+.password {
+  display: flex;
+  align-items: center;
+}
+.remove {
+  background-color: black;
+  border-radius: 3px;
+  display: flex;
+  align-content: top;
+  justify-content: center;
+  line-height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+}
+.admin {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 3px;
+  margin-right: -2px;
+  mask-image: url("../images/user-gear-solid.svg");
+  background: rgb(103, 238, 103);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 1.3rem;
+  box-shadow: 2px 2px black;
+}
+.leave {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 3px;
+  margin-right: -2px;
+  mask-image: url("../images/exit.png");
+  background: rgb(255, 255, 255);
+  mask-repeat: no-repeat;
+  mask-position: end;
+  mask-size: 1.3rem;
+
+  cursor: pointer;
+}
+.accept {
+  background-color: black;
+  color: rgb(15, 209, 15);
+  font-weight: bold;
+  border-radius: 3px;
+  display: flex;
+
+  justify-content: center;
+  line-height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  margin: 0 2px;
+}
+.decline {
+  background-color: black;
+  border-radius: 3px;
+  display: flex;
+  align-content: top;
+  justify-content: center;
+  line-height: 1.3rem;
+  width: 1.3rem;
+  cursor: pointer;
+  margin: 0 2px;
+}
+.settings-wheel {
+  height: 1.05rem;
+  width: 1.05rem;
+  outline: 1.5px solid $formOtl;
+  border-radius: 3px;
+
+  margin: 1px 4px 1px 2px;
+  mask-image: url("../images/gear-solid.svg");
+  background: $utility;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 15px;
+  margin-right: 5px;
+  margin-bottom: 2px;
+  cursor: pointer;
+  z-index: 0;
+}
+.eye {
+  height: 1.05rem;
+  width: 1.05rem;
+  margin: 1px 4px 1px 2px;
+  mask-image: url("../images/eye-solid.svg");
+  background: rgb(77, 77, 77);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 15px;
+  margin: 0 0 2px 5px;
+
+  cursor: pointer;
+  z-index: 0;
+}
+.eye-slash {
+  height: 1.05rem;
+  width: 1.05rem;
+  margin: 1px 4px 1px 2px;
+  mask-image: url("../images/eye-slash-solid.svg");
+  background: rgb(77, 77, 77);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 15px;
+  margin: 0 0 2px 5px;
+  cursor: pointer;
+  z-index: 0;
+}
+
+@media (min-width: 400px) {
+  .form {
+    width: 330px;
+  }
+}
+
+.titleCard {
+  display: flex;
+  justify-content: center;
+
+  .title {
+    padding: 0 4rem;
+    margin: 5px;
+    background: linear-gradient(
+      rgb(150, 133, 38),
+      black 20%,
+      black 80%,
+      rgb(150, 133, 38)
+    );
+    border-radius: 5px;
+  }
+}

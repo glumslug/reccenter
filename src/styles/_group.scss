@@ -1,0 +1,76 @@
+.group-member-icons {
+    height: 22px;
+    display: flex;
+    align-items: center;
+    background-color: #FFF2CC;
+    border: black solid 1px;
+    border-radius: 5px;
+    margin: 0 10px 5px 10px;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  .group-member-icons img{
+    margin: 0 2px;
+    
+    border-radius: 5px;
+    border: rgb(0, 0, 0) solid 1.5px;
+    
+    width: 20px;
+    height: 99%;
+    background: #DAE3F3;
+  }
+
+  .refresh {
+    -webkit-mask-image: url("../images/refresh.svg");
+    mask-image: url("../images/refresh.svg");
+    margin: 10px;
+    margin-right: 20px;
+    
+    min-width: 10px;
+    min-height: 10px;
+    cursor: pointer;
+    
+    padding: 3px;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: linear-gradient(rgb(139, 139, 139), #a6acb8 99%);
+    // background-color: #a6acb8;
+    transition: 0.3s;
+  }
+  .refresh:hover{
+    opacity: .7;
+  }
+  .refresh:active{
+    background-color: rgb(149, 251, 53);
+  }
+  
+  #got-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #4472C4;
+    background-image: url("../images/basketball-solid.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: yellow;
+    height: 80%;
+    min-width: 3.5rem;
+    border-radius: 10px;
+    border: black solid 1px;
+    margin: 0 0.4rem 0 0.8rem;
+    font-size: 1.2rem;
+  }
+  #no-numbers {
+  
+    height: 80%;
+    width: 3.5rem;
+    border-radius: 10px;
+    
+    
+  
+  }
+  
