@@ -40,11 +40,11 @@ const server = app.listen(port, () => {
 console.log("Environment: ", process.env.NODE_ENV);
 
 // server Front end
-app.use(express.static(path.join(__dirname, "../build")));
+// app.use(express.static(path.join(__dirname, "../build")));
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "../build", "index.html"));
-});
+// app.get("/*", function (req, res) {
+//   res.sendFile(path.join(__dirname, "../build", "index.html"));
+// });
 
 const io = socketIo(server);
 
