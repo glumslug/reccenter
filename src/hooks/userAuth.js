@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "../context/AuthContext";
 
-const API_URL = process.env.API_URL;
+const API_URL = "api/users/";
 
 // Register user
 const register = async (userData) => {
