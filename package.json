@@ -2,7 +2,7 @@
   "name": "pinboard2",
   "version": "0.1.0",
   "main": "./backend/server.js",
-  "proxy": "http://localhost:4000/",
+  "proxy": "http://18.218.156.81:4000/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.4",
