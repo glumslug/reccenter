@@ -6,7 +6,7 @@
 
 <h2>Vision</h2>
 <p>Are you tired of calling your roomate/spouse to see if you have onions at home? Now you don't have to, because you already know. This app makes shopping lists smart, letting you shop based on what you want to cook, and comparing what you already have to what you need.</p> 
- <h3>User Flow<h3> 
+<h3>User Flow<h3> 
  <ol>
    <li>Select or create a recipe using the Recipes tab.</li>
    <li>Select "Shop" to add any missing items to your shopping cart tab.</li>
@@ -14,8 +14,8 @@
    <li>Once you click "checkout" on the shopping tab, your items will be added to your home tab.</li>
    <li>Go back to the recipes tab and click "Cook". The proper ingredients will be consumed.</li>
 </ol>
-   <h3>Outcome</h3>
-   <p>If you don't like flipping back and forth between the recipe you want to cook at the grocery store this app will be useful. If you sometimes forget what you do or don't have at home, this app will be useful. If shopping is pretty easy for you and you don't see the point of using something like this, that's fine too.</p>
+<h3>Outcome</h3>
+<p>If you don't like flipping back and forth between the recipe you want to cook at the grocery store this app will be useful. If you sometimes forget what you do or don't have at home, this app will be useful. If shopping is pretty easy for you and you don't see the point of using something like this, that's fine too.</p>
 <h2>Stack</h2>
 <ul>
   <li>Frontend: React via Vite using TypeScript. Bootstrap and React Bootstrap for styling. I did the design in Figma.</li>
@@ -26,7 +26,7 @@
 
 <h3>Planned Updates</h3>
 <ol>
-  <li>Add weight units and "self" units (i.e. 1 muffin)/li>
+  <li>Add weight units and "self" units (i.e. 1 muffin)</li>
   <li>Implement a password reset system and account modification system</li>
   <li>Make an earmarking system to make sure multiple recipes aren't claiming the same ingredient</li>
 </ol>
