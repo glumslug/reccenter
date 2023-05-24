@@ -1,39 +1,47 @@
-<h1>The Fridge</h1>
-<a href="https://thefridgesystem.netlify.app/" target="_blank">Live Site Here</a>
-<h2>Recipe book, shopping list, and home inventory system — all in one.<h2>
-  
-<p>A web-app for creating/tracking recipes, and using those to shop. The app tracks what you have, and lets you create shopping lists for what you need.</p>
+<h1>Rec Center React App</h1>
+
+This is a social scheduling application for pickup basketball.
 
 <h2>Vision</h2>
-<p>Are you tired of calling your roomate/spouse to see if you have onions at home? Now you don't have to, because you already know. This app makes shopping lists smart, letting you shop based on what you want to cook, and comparing what you already have to what you need.</p> 
-<h3>User Flow<h3> 
- <ol>
-   <li>Select or create a recipe using the Recipes tab.</li>
-   <li>Select "Shop" to add any missing items to your shopping cart tab.</li>
-   <li>Go shopping with the Cart tab, check off or adjust items as you go.</li>
-   <li>Once you click "checkout" on the shopping tab, your items will be added to your home tab.</li>
-   <li>Go back to the recipes tab and click "Cook". The proper ingredients will be consumed.</li>
-</ol>
-<h3>Outcome</h3>
-<p>If you don't like flipping back and forth between the recipe you want to cook at the grocery store this app will be useful. If you sometimes forget what you do or don't have at home, this app will be useful. If shopping is pretty easy for you and you don't see the point of using something like this, that's fine too.</p>
+<p>It's hard to find time to do activities with friends. Everyone's busy, and coordinating via group chat is draining. That's why I created this app, which lets you see the days everyone is available, to take the hassle out of scheduling. Right now it's only for basketball, but in the future I envision expanding it to any activity imagineable.</p>
+
 <h2>Stack</h2>
 <ul>
-  <li>Frontend: React via Vite using TypeScript. Bootstrap and React Bootstrap for styling. I did the design in Figma.</li>
-  <li>Backend: Express backend API accessing a MySQL database.</li>
-  <li>Hosting: frontend is on Netlify, backend is on AWS EC2.</li>
-  <li>Auth: React Context API and JSON Web Tokens (JWT) for validation.</li>
+  <li>MERN: React JS frontend, node JS and express for the backend, and MongoDB for the database.</li>
+  <li>The styling is pure CSS via SASS. </li>
+  <li>File storage is done via Multer and Amazon S3.</li>
+  <li>The auth system uses React Context API and JSON Web Tokens (JWT) for validation.</li>
+  <li>The notification system is built using socket.io for instant updates.</li>
+  <li>The password reset is built using nodemailer and the Gmail API.</li>
 </ul>
 
-<h3>Planned Updates</h3>
-<ol>
-  <li>Add weight units and "self" units (i.e. 1 muffin)</li>
-  <li>Implement a password reset system and account modification system</li>
-  <li>Make an earmarking system to make sure multiple recipes aren't claiming the same ingredient</li>
-</ol>
-   
-<h3>Maybe Someday</h3>  
-<ol>
-  <li>Add a recipe sourcing solution: link with a third party API for recipes, create integration with popular recipes sites, make a parser (AI-based probably) to read in online recipes, add a recipe-book scanning feature.</li>
-  <li>AI-based photo-scanning system to perform initial/periodic inventorying - take a picture and the AI updates your home inventory list.</li>
-</ol>
+<h2>Functionality</h2>
+<p>First, set your schedule. The "ball now" icon automatically appears when you're available at the current time.</p>
+<img src="./public/demoPics/recc-ballnow.gif" width="50%" height="50%">
+<p>Now, join a group to start coordinating. You can either search for a friend's group, or make your own. Say Jane has a group called Best Friends. John can search for that group and request to join:</p>
+<img src="./public/demoPics/recc-search.png" width="50%" height="50%">
+<img src="./public/demoPics/recc-request.png" width="50%" height="50%">
+<img src="./public/demoPics/recc-groups.png" width="50%" height="50%">
+<p>Next, Jane will get this request and can approve or deny it:</p>
+<img src="./public/demoPics/recc-groups2.png" width="50%" height="50%">
+<p>Alternately, John can make his own group and invite Jane. Jane will receive this invite:</p>
+<img src="./public/demoPics/recc-manage.png" width="50%" height="50%">
+<p>If she joins, her schedule will be added to the group's master schedule:</p>
+<img src="./public/demoPics/recc-group1.png" width="50%" height="50%">
+<p>She can view who's available on a given day by clicking the square for that day/time. The blue icon on the upper right indicates what type of game is available currently. Right now, they can only play 1s (1 on 1).</p>
+<img src="./public/demoPics/recc-group2.png" width="50%" height="50%">
 
+<h3>User System Features</h3>
+<p>Basic functionality includes updating your account:</p>
+<img src="./public/demoPics/recc-acct.png" width="50%" height="50%">
+
+<p>There is also a friend system that functions exactly like the group system:</p>
+<img src="./public/demoPics/recc-friend1.png" width="50%" height="50%">
+<img src="./public/demoPics/recc-friend-manage.png" width="50%" height="50%">
+
+<h3>Notifications</h3>
+<p>Notifications show up on the menu, and hover over the relevant area:</p>
+<img src="./public/demoPics/recc-menu.png" width="50%" height="50%">
+
+<p>Notifications are instant thanks to socket.io </p>
+<img src="./public/demoPics/recc-notif.gif" width="50%" height="50%">
